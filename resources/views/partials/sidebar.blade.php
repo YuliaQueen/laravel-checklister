@@ -6,28 +6,24 @@
         <li class="c-sidebar-nav-item">
             <a class="c-sidebar-nav-link" href="{{route('home')}}">
                 <svg class="c-sidebar-nav-icon">
-                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home"></use>
+                    <use xlink:href="{{asset('vendors/@coreui/icons/svg/free.svg#cil-home')}}"></use>
                 </svg>
                 Home
             </a>
         </li>
         <li class="c-sidebar-nav-title">Dashboard</li>
-        <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a
-                class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
+        <li class="c-sidebar-nav-item">
+            <a class="c-sidebar-nav-link" href="{{route('admin.pages.index')}}">
                 <svg class="c-sidebar-nav-icon">
-                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-book"></use>
+                    <use xlink:href="{{asset('vendors/@coreui/icons/svg/free.svg#cil-book')}}"></use>
                 </svg>
-                Pages</a>
-            <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{route('admin.pages.index')}}"><span
-                            class="c-sidebar-nav-icon"></span> All pages</a></li>
-
-            </ul>
+                Pages
+            </a>
         </li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
                 <svg class="c-sidebar-nav-icon">
-                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
+                    <use xlink:href="{{asset('vendors/@coreui/icons/svg/free.svg#cil-account-logout')}}"></use>
                 </svg>
                 Logout</a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
